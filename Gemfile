@@ -60,3 +60,6 @@ gem 'devise'
 
 ## Annotation
 gem 'annotate'
+
+## Web push notification
+gem 'web-push'
