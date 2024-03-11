@@ -4,37 +4,129 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
-/.bundle
+/yarn-error.log
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-*
+# Ignore bundler config.
+.DS_Store
+.bundle
+.vagrant
+.rake_tasks~
+.sass-cache/
+Junkfile
+Vagrantfile
+db/schema.rb
+db/*.sqlite3*
+db/development_structure.sql
+db/test_structure.sql
+db/structure.sql
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+log/*.log
+log/*.db
+log/*.age
+log/*.swp
+public/assets/
+public/uploads/
+public/stylesheets/compiled
+public/javascripts/common.js
+tmp/**/*
+tmp/*
+doc/**/*
+doc/*
+coverage/**/*
+coverage/*
+ignore/*
+/config/database.yml
+/config/master.key
 
-# Ignore uploaded files in development.
+# Rails
+db/*.sqlite3-journal
+*.log
+tmp
+tmp/**/*
+.byebug_history
+
+# Documentation
+doc/api
+doc/app
+.yardoc
+.yardopts
+coverage
+
+# Public Uploads
+public/system/*
+public/themes/*
+
+# Public Cache
+public/javascripts/cache
+public/stylesheets/cache
+
+# Vendor Cache
+vendor/cache
+
+# Acts as Indexed
+index/**/*
+
+# Refinery Specific
+*.tmproj
+*.autobackupbyrefinery.*
+refinerycms-*.gem
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# NetBeans
+nbproject
+
+# Eclipse
+.project
+
+# Redcar
+.redcar
+
+# Rubinius
+*.rbc
+
+# Vim
+*.swp
+*.swo
+
+# RubyMine
+.idea
+
+# E-texteditor
+.eprj
+
+# Backup
+*~
+
+# Capybara Bug
+capybara-*html
+
+# sass
+.sass-cache
+.sass-cache/*
+
+#rvm
+.rvmrc
+.rvmrc.*
+config/puma.rb
+
+# Ignore uploaded files in development
 /storage/*
 !/storage/.keep
 
-/public/assets
-.byebug_history
+node_modules/
+yarn.lock
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
+# Environment file added
+.env
