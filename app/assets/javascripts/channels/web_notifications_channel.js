@@ -20,7 +20,7 @@
       console.log("Received:", data.message);
 
       // Append notification to notification list div
-      $('.notification-list').append("<h1>" + data.message + "</h1>");
+      $('.notification-ui_dd').append("<div class='notification-list'><div class='notification-list_detail'><p>" + data.message + "</p></div></div>");
       
       // Clear the input
       $('#notification_input').val('');
