@@ -62,4 +62,4 @@ gem 'devise'
 gem 'annotate'
 
 ## Web push notification
-gem 'web-push'
+gem 'webpush'
