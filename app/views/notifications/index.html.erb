@@ -1,0 +1,23 @@
+<h1>Notifications</h1>
+
+<script>
+  if (navigator.serviceWorker) {
+    const vapidPublicKey = new Uint8Array(<%= Base64.urlsafe_decode64(Rails.application.credentials[:webpush][:public_key] ).bytes %>);
+    
+    navigator.serviceWorker.register("<%= asset_path('service_worker.js') %>")
+    .then(function(reg) {
+      console.log('Service worker change, registered the service worker');
+      navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
+        serviceWorkerRegistration.pushManager
+        .subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: vapidPublicKey
+        });
+      });
+    });
+  }
+  // Otherwise, no push notifications :(
+  else {
+    console.error('Service worker is not supported in this browser');
+  }
+</script>
