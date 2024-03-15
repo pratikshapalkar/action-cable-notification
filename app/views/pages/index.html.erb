@@ -11,7 +11,7 @@
     $('.submit-btn').click(function() {
       var inputVal = $('#notification_input').val();
 
-      // inputVal = inputVal.value.trim();
+      inputVal = inputVal.trim();
       if (inputVal != '') {
         App.webNotificationsChannel.receive(inputVal);
       }
